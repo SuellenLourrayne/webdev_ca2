@@ -44,9 +44,9 @@
                 </div>
                 <div class="col-lg-2 order-1 mb-3 d-flex flex-column gap-2 mx-auto align-items-stretch">
                     <button name="1.2.1" class="btn btn-success btn-block" data-sql="SELECT COUNT(emp_id) from employees WHERE hire_date = '1991-05-01'" onClick="reply_click(this)">2.1</button>
-                    <button name="1.2.2" class="btn btn-success btn-block" data-sql="SELECT e.emp_id,COUNT(t.title) as total FROM employees as e INNER JOIN titles as t ON e.emp_id = t.emp_id GROUP by t.emp_id HAVING total > 2" onClick="reply_click(this)">2.2</button>
-                    <button name="1.2.3" class="btn btn-success btn-block" data-sql="SELECT * from employees WHERE gender = 'F'" onClick="reply_click(this)">2.3</button>
-                    <button name="1.2.4" class="btn btn-success btn-block" data-sql="SELECT * from employees WHERE hire_date < '1986-01-01' and last_name = 'Simmel'" onClick="reply_click(this)">2.4</button>
+                    <button name="1.2.2" class="btn btn-success btn-block" data-sql="SELECT e.emp_id,COUNT(t.title) as total FROM employees as e INNER JOIN titles as t ON e.emp_id = t.emp_id GROUP by t.emp_id HAVING total > 2 LIMIT 100" onClick="reply_click(this)">2.2</button>
+                    <button name="1.2.3" class="btn btn-success btn-block" data-sql="SELECT * from employees WHERE gender = 'F' LIMIT 100" onClick="reply_click(this)">2.3</button>
+                    <button name="1.2.4" class="btn btn-success btn-block" data-sql="SELECT * from employees WHERE hire_date < '1986-01-01' and last_name = 'Simmel' LIMIT 100" onClick="reply_click(this)">2.4</button>
                     <button name="1.2.5" class="btn btn-success btn-block" data-sql="SELECT COUNT(emp_id) as 'total with B' from employees WHERE last_name LIKE 'B%'" onClick="reply_click(this)">2.5</button>
                     <button name="1.2.6" class="btn btn-success btn-block" data-sql="CREATE TABLE emp_training (trainer_no INTEGER PRIMARY KEY AUTOINCREMENT,first_name varchar(30) NOT NULL,last_name varchar(30) NOT NULL,t_module varchar(20));" onClick="reply_click(this)">2.6</button>
                     <button name="1.2.7" class="btn btn-success btn-block" data-sql="INSERT INTO emp_training(first_name,last_name,t_module) VALUES ('Joe','Bloggs','Google Docs'),('Fred','Bloggs','Google Sheets')" onClick="reply_click(this)">2.7</button>

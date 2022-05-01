@@ -48,18 +48,18 @@ FROM employees as e INNER JOIN dept_manager as d ON e.emp_id = d.emp_id GROUP by
 ORDER BY d.dept_id ASC LIMIT 100" onClick="reply_click(this)">3.1</button>
                     
                     <button name="1.3.2" class="btn btn-success btn-block" data-sql="SELECT e.gender,avg(s.salary) as avg_salary,t.title
-                    FROM employees as e INNER JOIN salaries as s ON e.emp_id = s.emp_id INNER JOIN titles AS t ON e.emp_id = t.emp_id
-                    WHERE t.title = 'Technique Leader' GROUP by e.gender LIMIT 100" onClick="reply_click(this)">3.2</button>
+FROM employees as e INNER JOIN salaries as s ON e.emp_id = s.emp_id INNER JOIN titles AS t ON e.emp_id = t.emp_id
+WHERE t.title = 'Technique Leader' GROUP by e.gender LIMIT 100" onClick="reply_click(this)">3.2</button>
                     
                     <button name="1.3.3" class="btn btn-success btn-block" data-sql="SELECT COUNT(e.emp_id) as total FROM employees as e
-                    INNER JOIN salaries as s ON e.emp_id = s.emp_id WHERE s.salary BETWEEN 90000 and 90040 and s.to_date = '9999-01-01'" onClick="reply_click(this)">3.3</button>
+INNER JOIN salaries as s ON e.emp_id = s.emp_id WHERE s.salary BETWEEN 90000 and 90040 and s.to_date = '9999-01-01'" onClick="reply_click(this)">3.3</button>
                     
                     <button name="1.3.4" class="btn btn-success btn-block" data-sql="SELECT e.first_name,e.last_name, s.salary FROM employees as e
-                    INNER JOIN salaries as s ON e.emp_id = s.emp_id WHERE s.salary > 90000 and s.to_date = '9999-01-01' GROUP by e.emp_id
-                    ORDER by e.last_name DESC,e.first_name DESC LIMIT 100" onClick="reply_click(this)">3.4</button>
+INNER JOIN salaries as s ON e.emp_id = s.emp_id WHERE s.salary > 90000 and s.to_date = '9999-01-01' GROUP by e.emp_id
+ORDER by e.last_name DESC,e.first_name DESC LIMIT 100" onClick="reply_click(this)">3.4</button>
                     
                     <button name="1.3.5" class="btn btn-success btn-block" data-sql="SELECT e.first_name,e.last_name, s.* FROM employees as e
-                    INNER JOIN salaries as s ON e.emp_id = s.emp_id WHERE e.emp_id = 10012" onClick="reply_click(this)">3.5</button>
+INNER JOIN salaries as s ON e.emp_id = s.emp_id WHERE e.emp_id = 10012" onClick="reply_click(this)">3.5</button>
                 </div>
                 <div class="col-lg-10 order-2 border-success">
                     <textarea id="commands" class="mb-5">TEXT

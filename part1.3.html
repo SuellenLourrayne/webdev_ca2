@@ -44,7 +44,8 @@
                 </div>
                 <div class="col-lg-2 order-1 mb-3 d-flex flex-column gap-2 mx-auto align-items-stretch">
                     <button name="1.3.1" class="btn btn-success btn-block" data-sql="SELECT d.dept_id, e.gender,COUNT(e.emp_id) as num_empGender 
-                    FROM employees as e INNER JOIN dept_manager as d ON e.emp_id = d.emp_id GROUP by d.dept_id,e.gender ORDER BY d.dept_id ASC LIMIT 100" onClick="reply_click(this)">3.1</button>
+FROM employees as e INNER JOIN dept_manager as d ON e.emp_id = d.emp_id GROUP by d.dept_id,e.gender 
+ORDER BY d.dept_id ASC LIMIT 100" onClick="reply_click(this)">3.1</button>
                     
                     <button name="1.3.2" class="btn btn-success btn-block" data-sql="SELECT e.gender,avg(s.salary) as avg_salary,t.title
                     FROM employees as e INNER JOIN salaries as s ON e.emp_id = s.emp_id INNER JOIN titles AS t ON e.emp_id = t.emp_id
